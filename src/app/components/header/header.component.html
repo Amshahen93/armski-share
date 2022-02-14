@@ -1,0 +1,44 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 header unselectable position-relative">
+            <img src='/assets/images/logo.png' class='logo'>
+            <div class="menuButtons">
+                <ng-container 
+                  *ngFor='let button of menuBur; let i = index;'>
+                    <div 
+                      class="menuButton boldText"
+                      (click)='onClickBur(button)'
+                      [ngClass]="{'active': button.active}"
+                      *ngIf='!button.submenu'>
+                        {{ button.name }}
+                    </div>
+                    <ng-container>
+                      <div class='menuButton submenu boldText'
+                      [ngClass]="{'active': button.active}" 
+                      *ngIf="button.submenu" 
+                      [matMenuTriggerFor]="menu">
+                        {{ button.name }}
+                      </div>
+                      <mat-menu #menu="matMenu">
+                        <button mat-menu-item [disabled]="menu.disabled"
+                          [ngClass]="{'active': button.submenuIndex === j}" 
+                          *ngFor='let menu of button.submenu; let j = index;'
+                          (click)='onSubmenus(i, j)'>
+                          {{ menu.name }}
+                        </button>
+                      </mat-menu>
+                    </ng-container>
+                </ng-container>
+                <button class="btn btn-secondary button getInTouch boldText">
+                  Get In Touch
+                </button>
+            </div>
+            <!-- for mobile -->
+            <div class="menuButtonsMobile">
+              <button class="btn btn-secondary button getInTouch boldText">
+                Enquire
+              </button>
+            </div>
+        </div>
+    </div>
+</div>

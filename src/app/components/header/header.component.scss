@@ -1,0 +1,70 @@
+.header{
+    height: 80px;
+    border-bottom: 1px solid #dbdbdb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+  height: 90%;
+  width: auto;
+  margin-left: 3%;
+  cursor: pointer;
+}
+
+.menuButtons{
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menuButton{
+  padding: 0px 20px;
+  float: left;
+  cursor: pointer;
+  color: #7F564F;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.menuButton:hover {
+  color: #D96C5E;
+}
+
+.active {
+  color: #D96C5E;
+}
+.getInTouch{
+  padding: 13px 17px;
+  color: white;
+  border-radius: 0px;
+  margin-left: 10px;
+  margin-right: 20px;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.menuButtonsMobile{
+  display: none;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1100px) {
+  .menuButtons{
+    display: none;
+  }
+  .menuButtonsMobile{
+    display: flex;
+  }
+  .getInTouch{
+    padding: 6px 17px;
+  }
+}
+
+.submenu{
+
+}

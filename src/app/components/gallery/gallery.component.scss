@@ -1,0 +1,16 @@
+.gallery-title {
+  text-transform: uppercase;
+  border-bottom: 2px solid #dbdbdb;
+  color: #7F564F;
+}
+
+.gallery-image{
+  cursor: pointer;
+  background-size: cover;
+  height: 200px;
+  background-position: center;
+}
+
+.images-container{
+  border-bottom: solid 1px #dbdbdb;
+}

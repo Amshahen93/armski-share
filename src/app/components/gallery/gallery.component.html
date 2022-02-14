@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 text-center boldText mt-5 text-color f32 mb-4">
+      GALLERY
+    </div>
+  </div>
+  <div class="row" *ngFor="let tourGroups of tours">
+    <div class="col-12 mt-3 mb-3">
+       <span class="gallery-title f22 boldText pb-1 pr-4">
+        {{tourGroups.title}}
+      </span>
+    </div>
+    <div class="col-12 images-container pr-4 pl-4 mb-5 pb-3">
+      <div class="row">
+        <ng-container *ngFor="let tour of tourGroups.tours; let i = index">
+          <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-2 pl-1 pr-1" 
+            *ngFor="let img of tour.pictures">
+            <div 
+              [appImageZoom]="{url: img.url, smallUrl: img.smallUrl, alt: img.alt, id: i}" 
+              [images]="tour.pictures" 
+              class='gallery-image w-100' 
+              [ngStyle]="{'background-image': 'url(' + img.smallUrl + ')'}">
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

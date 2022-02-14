@@ -1,0 +1,21 @@
+.bigImage{
+  height: calc(60vh - 120px);
+  min-height: 200px;
+  max-height: 40vw;
+  background-image: url('/assets/images/home.jpg');
+  background-size: 100%;
+}
+.blog-image {
+  height: 350px;
+  background-size: auto 100%;
+}
+
+.calendar-icon{
+  font-size: 18px;
+  color: var(--bg);
+}
+
+.blog-short-text{
+  max-height: 205px;
+  overflow: hidden;
+}

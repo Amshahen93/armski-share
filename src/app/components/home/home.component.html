@@ -1,0 +1,119 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 bigImage"></div>
+    <div class="col-12 imageUnder">
+      <!-- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, et! -->
+    </div>
+    <div class="col-12 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 toursTitle">
+            Ski and Summer Adventures.
+          </div>
+          <div class="col-12 toursSubtitle text-center mt-3">
+            is the only incoming tour operator in Armenia, which offers exclusively adventure tour packages in the region. “Ski and Summer Adventures” have been successfully carrying out ski mountaineering tours, mountain biking and trekking tours, bicycle and climbing tours in Armenia and Georgia for about 15 years.
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12 col-md-6 col-lg-4 tourContainer" 
+            *ngFor='let tour of tours; let i = index;'>
+            <div class="tour"
+            [ngStyle]="{'background-image': 'url(' + tour.image + ')' }">
+              <p class = 'boldText tourTitle'>
+                {{ tour.name }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row bgDark mt-5">
+    <div class="col-12 pt-5 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 toursSubtitle text-center mt-3">
+            During these years we gained lots of experience in this field implementing the suggestions and ideas of our guests and partners. Combining it with the climatic conditions of our region and landscape we were able to create the best tour products. They are in demand, they are unique, they create impressions for a lifetime and the most important thing is they are safe.<br>
+            The leisure time of our guests is very important for us. In the event of sudden weather changes, we pursue a flexible tour policy, changing the location - if necessary, even the country. Our team does their best to organize your vacation in the best way.            
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12 col-md-6 col-lg-4 tourContainer" 
+            *ngFor='let tour of tours1; let i = index;'>
+            <div class="tour"
+            [ngStyle]="{'background-image': 'url(' + tour.image + ')' }">
+              <p class = 'boldText tourTitle'>
+                {{ tour.name }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <!-- <div class="row mt-5">
+    <div class="col-12 pt-5 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-6 p-0 pr-4">
+            <img src="assets/images/home.jpg" class = 'w-100' alt="">
+          </div>
+          <div 
+          class="col-12 col-lg-6 p-0 pl-lg-5 pt-4 pb-4 d-flex 
+          align-items-start justify-content-center flex-column">
+            <p class="toursTitle">
+              Family Travel Experts
+            </p>
+            <p class="smallText mt-2">
+              Our senior family travel specialists, Ben and Lisa, 
+              have 35 combined years creating exceptional tailor-made holidays.
+            </p>
+            <p class="smallText mt-2">
+              They have travelled the world with their families, from the 
+              savanna grasslands of Africa to the jungles of Central America.
+            </p>
+            <button class="btn btn-danger button redButton mt-4">
+              Read more >
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- <div class="row bgDark mt-5">
+    <div class="col-12 pt-5 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 pb-5">
+            <p class="toursTitle text-center">Family Travel Experts</p>
+            <p class="toursSubtitle text-center mt-4">
+              Our Family Holidays 
+              <span class = 'lightText'>are rated 5 out of 5</span>
+            </p>
+            <div class="d-flex align-items-center flex-column">
+              <div class="tooltipCustom">
+                <p class="blackText">
+                  We knew that we didn’t want a standard package safari and 
+                  beach holiday but what we got was beyond all our 
+                  expectations – a truly personal, family experience of 
+                  Kenya that we will remember forever!
+                </p>
+              </div>
+              <div class="name">
+                <div class="tooltipItem"></div>
+                <p class="blackText">
+                  John <span class = 'link'>See all Reviews</span>
+                </p>
+              </div>
+              <div class="smallText pt-2">
+                * according to Tourdust's onsite customer reviews and Feefo 
+                verified customer reviews
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+</div>

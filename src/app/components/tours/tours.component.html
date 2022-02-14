@@ -1,0 +1,86 @@
+<div class="container-fluid">
+  <div class="row mb-5 pb-5">
+    <div class="col-12 bigImage d-flex align-items-center" [ngStyle]='{"background-image": "url(" + bigImage + ")"}'>
+      <p class='text-center w-100 boldText bigTitle'>
+        <!-- {{ allTours[toursType] }} -->
+      </p>
+    </div>
+  </div>
+  <div class="row ">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 f32 text-color text-center">
+          <!-- Wat Is {{allTours[toursType]}} -->
+        </div>
+        <div class="col-12 text-color mt-4 mb-3 text-justify">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur incidunt eligendi accusamus ex tempora fuga impedit dolor atque voluptas quod ipsum cupiditate minus amet excepturi cum voluptatum minima adipisci animi, quasi alias suscipit inventore facilis et sint! Dolorem rerum fuga velit maxime laboriosam iste mollitia ab ipsam, placeat reprehenderit ullam in perspiciatis cupiditate veniam dolor officiis dolore vero nihil laborum voluptatibus. Incidunt, dolore. Earum voluptatum vero vel animi nihil dolore explicabo esse unde ullam aut, suscipit tempora obcaecati, exercitationem, corrupti culpa temporibus odio cupiditate. Totam nisi quod ducimus voluptatibus error a hic ab vitae eligendi inventore. Nemo est eum dignissimos velit eaque saepe adipisci numquam maxime odio ipsa dolor non animi veniam magnam, voluptate autem. Eius earum, praesentium voluptas incidunt in velit consectetur? Necessitatibus, deleniti ad. Qui nihil eligendi pariatur illo quis nesciunt. Magnam, veritatis eum. Provident architecto illo non perspiciatis quibusdam asperiores quia minus amet totam! Amet perferendis ipsa ab pariatur iure dolorem quae, sunt repellendus nostrum facilis praesentium aliquid temporibus voluptates facere modi voluptatibus nam. Corrupti, distinctio sequi? Consequuntur tempora soluta iusto consequatur voluptas eveniet et fugit atque nesciunt debitis accusantium, distinctio obcaecati aliquam, quisquam provident ad hic sint aliquid dolorem. Quis ab vero quisquam. Excepturi in nostrum quam eos sint dicta id beatae natus, impedit corrupti architecto veritatis quas suscipit nihil culpa facilis possimus odio nesciunt, hic minus sed totam consequuntur molestias. Eius, quasi. Odio pariatur repudiandae corrupti fugit, nisi vero dignissimos. Dolorem voluptate quia perspiciatis tenetur nesciunt asperiores. Culpa enim ipsa commodi voluptatem nisi, saepe deserunt corporis laudantium ullam soluta, reprehenderit sint consequuntur? Tempore in labore quis iure mollitia voluptatem amet quod, harum cum minus hic atque officia ipsum impedit cumque explicabo sed laborum nostrum laboriosam ea dolore ipsam iusto. Temporibus alias rerum necessitatibus numquam placeat voluptatum nostrum repellendus nisi distinctio soluta ratione, beatae enim explicabo similique saepe reprehenderit at quidem accusamus et optio impedit eligendi corporis suscipit? Fugit facere harum, voluptates modi illo quo repellendus? Eum, dolores? Incidunt suscipit ea reprehenderit quo, vel tempore beatae recusandae excepturi illum molestias laborum magni aliquid qui quam adipisci magnam iusto nisi harum saepe consectetur ex placeat libero! Accusantium ducimus, dicta aliquid facere et recusandae similique quam modi. Repellendus tempora facere rem quidem velit cum, iusto consequatur ea quibusdam consequuntur. Minima, sequi nam. Harum ad, esse debitis praesentium deleniti ipsam, placeat, architecto sit vitae aspernatur minima repellat? Minus deserunt assumenda possimus, praesentium fugiat iusto quidem explicabo! Eligendi, nihil numquam?
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-5 pr-2 pl-2 border-top border-bottom bg">
+    <div class="col-12 mt-5 mb-5">
+      <p class='text-center boldText f32 text-color'>
+        <!-- Our {{ allTours[toursType] }} -->
+      </p>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4 mb-3 pr-2 pl-2" *ngFor='let tour of tours; let i = index'>
+      <div class='tour'>
+        <!-- <img class='tourImage w-100' [src]='tour.image'> -->
+        <div class="tour-image w-100" [ngStyle]="{'background-image': 'url(' + tour.image + ')'}">
+        </div>
+        <div class="title text-center f22 text-color boldText mt-4 mb-4">
+          {{tour.name}}
+        </div>
+        <div class='pl-4 d-flex mt-2'>
+          <div>
+            <div class='star-icon-outside mr-3'>
+              <svg aria-hidden="true" class='star-icon' fill='white' focusable="false" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+            </div>
+          </div>
+          <div class='text-color line-height f17'>
+            Two weeks from £2,000 per person including flights from the UK (US$2,500 from the US)
+          </div>
+        </div>
+        <div class='pl-4 d-flex mt-3'>
+          <div>
+            <div class='star-icon-outside mr-3'>
+              <svg aria-hidden="true" class='star-icon' fill='white' focusable="false" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+            </div>
+          </div>
+          <div class='text-color line-height f17'>
+            Explore Pacific beaches, dense jungle & Volcanoes
+          </div>
+        </div>
+        <div class='pl-4 d-flex mt-3'>
+          <div>
+            <div class='star-icon-outside mr-3'>
+              <svg aria-hidden="true" class='star-icon' fill='white' focusable="false" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+            </div>
+          </div>
+          <div class='text-color line-height f17'>
+            Experience zip wires, rafting & surfing
+          </div>
+        </div>
+        <div class='pl-4 d-flex mt-3'>
+          <div>
+            <div class='star-icon-outside mr-3'>
+              <svg aria-hidden="true" class='star-icon' fill='white' focusable="false" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+            </div>
+          </div>
+          <div class='text-color line-height f17'>
+            See Sloth Bears, Toucans & Howler Monkeys
+          </div>
+        </div>
+        <div class="d-flex justify-content-center mt-4 mb-5">
+          <button class='btn redButton' (click)='onTour(tour)'>See more ></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-12">
+
+    </div>
+  </div>
+</div>

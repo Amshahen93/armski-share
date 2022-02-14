@@ -1,0 +1,121 @@
+.bigImage{
+  height: calc(100vh - 120px);
+  min-height: 400px;
+  max-height: 60vw;
+  background-image: url('/assets/images/home.jpg');
+  background-size: 100%;
+}
+.imageUnder{
+  height: 40px;
+  background-color: var(--bg);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toursTitle{
+  font-size: 32px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #5A564F;
+}
+.toursSubtitle{
+  font-size: 16px;
+  color: #5A564F;
+  line-height: 30px;
+}
+.tourContainer{
+  width: 100%;
+  padding: 3px;
+}
+.allTour{
+  height: 300px;
+  border: solid 1px;
+  background-color: #828362;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.tour{
+  height: 300px;
+  border: solid 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+}
+
+.tourTitle{
+  line-height: 33px;
+  font-size: 26px;
+  color: white;
+  word-spacing: 100vw;
+  text-align: center;
+  text-shadow: 1px 15px 8px rgba(0, 0, 0, 0.5);
+}
+
+.redButton{
+  font-size: 19px;
+  border-radius: 1px;
+  padding: 7px 25px;
+  display: flex;
+  align-items: center;
+}
+.bgDark{
+  background-color: #F5F5F5;
+}
+.smallText{
+  font-size: 17px;
+  color: #5A564F;
+  line-height: 25px;
+}
+.blackText{
+  font-size: 17px;
+  line-height: 25px;
+}
+.lightText{
+  color: #8e8174;
+}
+
+.tooltipCustom{
+  max-width: 550px;
+  width: 100%;
+  background-color: #EDDBDB;
+  padding: 25px 30px 20px 30px;
+}
+
+.name{
+  max-width: 550px;
+  width: 100%;
+  padding-left: 50px;
+  padding-top: 20px;
+  position: relative;
+}
+
+.tooltipItem{
+  border-color: transparent #eddbdb transparent transparent;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 22px 24px 0;
+  top: 0;
+  left: 30px;
+  position: absolute;
+}
+.link{
+  color: #d96c5e;
+  cursor: pointer;
+}
+.link:hover{
+  text-decoration: underline #d96c5e;
+}
+.smallText{
+  color: black;
+  font-size: 13px;
+}

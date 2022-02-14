@@ -1,0 +1,12 @@
+.headerHeight{
+  height: 80px;
+}
+
+app-header{
+  top: 0px;
+  width: 100%;
+  background-color: white;
+  right: 0px;
+  position: fixed;
+  z-index: 2;
+}

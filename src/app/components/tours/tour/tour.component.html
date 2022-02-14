@@ -1,0 +1,173 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 tourImage" [ngStyle]="{'background-image': 'url(' + tourImage + ')'}" #elem></div>
+    <div appParallax [pages]='pages' [elements]='[elem, elem1, elem2, elem3]'></div>
+    <div class="d-flex justify-content-center w-100 mt-5 mb-4">
+      <span class="rout mr-2 ml-2">{{firstRout}}</span> / <span class="rout mr-2 ml-2">{{tourName}}</span>
+    </div>
+    <div class="bigText text-center w-100 mb-3">
+      {{tourName}}
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 mt-4 mb-4 text-center tourText">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis veniam ullam ex illum ducimus cumque velit modi aperiam iusto, magni mollitia dolore deleniti fuga dolorem vel pariatur, ea excepturi minima labore itaque ut reiciendis! Quidem, numquam amet consequuntur illum neque explicabo odio ullam iste nisi perferendis deleniti doloremque quibusdam? Minima dolorum labore itaque soluta. Possimus nam id accusantium pariatur non, sint, eligendi dolorum corporis error repellendus doloremque ducimus omnis ex, assumenda facere quod aspernatur ratione consectetur aliquam ad asperiores nisi nostrum? Impedit aperiam assumenda delectus quidem quisquam minus maxime, sit obcaecati ratione, magni nostrum, beatae vel molestias voluptate inventore optio.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row background-dark" #elem1>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 mt-5 mb-5 text-center bigText">
+          PICTURES
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-4 text-center" *ngFor='let image of images; let i = index;'>
+          <!-- <img [src]="image" class="trip-image" [appImageZoom]='{id: i, url: image}'> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="container">
+      <div class="col-12 pt-5 pb-5 mt-5 mb-5 border-tour tour-bg-color">
+        <div class="row">
+          <div class="col-12 col-lg-4 mt-3">
+            <div class='d-flex align-items-center w-100 justify-content-center'>
+              <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="comment-alt-lines" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-comment-alt-lines fa-w-16 fa-2x tur-icon mr-3">
+                <path fill="currentColor" d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 7.1 5.8 12 12 12 2.4 0 4.9-.7 7.1-2.4L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64zm32 352c0 17.6-14.4 32-32 32H293.3l-8.5 6.4L192 460v-76H64c-17.6 0-32-14.4-32-32V64c0-17.6 14.4-32 32-32h384c17.6 0 32 14.4 32 32v288zM280 240H136c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h144c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8zm96-96H136c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h240c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8z" class=""></path>
+              </svg>
+              <span class='board-title'>
+                PERSONALISED SERVICE
+              </span>
+            </div>
+            <p class='text-center mt-2 board-text lightText pr-2 pl-3 pr-3'>
+              We know every family is unique. Your <b class='boldText'>dedicated travel consultant</b> will develop a bespoke trip just for you.
+            </p>
+          </div>
+          <div class="col-12 col-lg-4 mt-3">
+            <div class='d-flex align-items-center w-100 justify-content-center'>
+              <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="shield-check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-shield-check fa-w-16 fa-2x tur-icon mr-3">
+                <path fill="currentColor" d="M466.5 83.7l-192-80a48.15 48.15 0 0 0-36.9 0l-192 80C27.7 91.1 16 108.6 16 128c0 198.5 114.5 335.7 221.5 380.3 11.8 4.9 25.1 4.9 36.9 0C360.1 472.6 496 349.3 496 128c0-19.4-11.7-36.9-29.5-44.3zM262.2 478.8c-4 1.6-8.4 1.6-12.3 0C152 440 48 304 48 128c0-6.5 3.9-12.3 9.8-14.8l192-80c3.9-1.6 8.4-1.6 12.3 0l192 80c6 2.5 9.9 8.3 9.8 14.8.1 176-103.9 312-201.7 350.8zm136.2-325c-4.7-4.7-12.3-4.7-17-.1L218 315.8l-69-69.5c-4.7-4.7-12.3-4.7-17-.1l-8.5 8.5c-4.7 4.7-4.7 12.3-.1 17l85.9 86.6c4.7 4.7 12.3 4.7 17 .1l180.5-179c4.7-4.7 4.7-12.3.1-17z" class=""></path>
+              </svg>
+              <span class='board-title'>
+                VALUE GUARANTEE
+              </span>
+            </div>
+            <p class='text-center mt-2 board-text lightText pr-3 pl-3'>
+              Tailor-made doesn't have to be expensive. We work hard to be <b class='boldText'> on brief and below budget.</b>
+            </p>
+          </div>
+          <div class="col-12 col-lg-4 mt-3">
+            <div class='d-flex align-items-center w-100 justify-content-center'>
+              <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="map-marker-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-map-marker-alt fa-w-12 fa-2x tur-icon mr-3">
+                <path fill="currentColor" d="M192 96c-52.935 0-96 43.065-96 96s43.065 96 96 96 96-43.065 96-96-43.065-96-96-96zm0 160c-35.29 0-64-28.71-64-64s28.71-64 64-64 64 28.71 64 64-28.71 64-64 64zm0-256C85.961 0 0 85.961 0 192c0 77.413 26.97 99.031 172.268 309.67 9.534 13.772 29.929 13.774 39.465 0C357.03 291.031 384 269.413 384 192 384 85.961 298.039 0 192 0zm0 473.931C52.705 272.488 32 256.494 32 192c0-42.738 16.643-82.917 46.863-113.137S149.262 32 192 32s82.917 16.643 113.137 46.863S352 149.262 352 192c0 64.49-20.692 80.47-160 281.931z" class=""></path>
+              </svg>
+              <span class='board-title'>
+                STRESS FREE
+              </span>
+            </div>
+            <p class='text-center mt-2 board-text lightText pl-3 pr-3'>
+              We have years of experience creating family holidays. We take away all the stress to create <b class='boldText'>the perfect family holiday.</b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row  background-dark" #elem2>
+    <div class="container">
+      <div class="row pb-4">
+        <div class="col-12 text-center bigText mt-5 mb-5 pt-4">
+          ACCOMMODATION
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 p-0 mt-2 pr-1 pl-1" *ngFor='let accommodation of accommodations; let i = index;'>
+          <div class='accommodation'>
+            <img class='w-100 mb-2' [src]='accommodation.image'>
+            <p class='tripTitle pl-2'>{{accommodation.title}}</p>
+            <p class='mt-1 pl-2 mt-1'>{{accommodation.location}}</p>
+            <div class="d-flex w-100 mt-1 justify-content-between">
+              <div class='accommodation-box pt-3'>
+                <p class='text-center'>Our Rating</p>
+                <p class='text-center'>{{accommodation.rating}}/10</p>
+              </div>
+              <div class='accommodation-box pt-3'>
+                <p class='text-center'>Price guide</p>
+              </div>
+            </div>
+            <div class='mt-3 pl-2 pb-2' *ngIf='accommodation.have'>
+              <p class='smallText' *ngFor='let item of accommodation.have'>
+                {{item}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-5" #elem3>
+    <div class="container  mt-5">
+      <div class="col-12 mt-5 mb-4 col-lg-10 offset-lg-1">
+        <div class="boldText text-title text-center">
+          Lorem, ipsum dolor.
+        </div>
+        <div class='text lightText mt-3 text-justify'>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni vel facere reprehenderit a, nemo consectetur dolorem odit mollitia,
+          eos laudantium, veniam est. Obcaecati quaerat tempore laudantium placeat consequatur nisi nesciunt laboriosam consectetur id earum,
+          magni excepturi ea ducimus deserunt itaque exercitationem non unde, deleniti quos porro ipsa fuga impedit. Nihil debitis asperiores
+          magni tempore maxime iste autem, nostrum laboriosam ipsum vero perferendis deleniti officia! Iste, itaque consequatur perspiciatis
+          facere aliquam ipsam nobis unde dolores officiis. Voluptate possimus saepe provident, at maxime tenetur, quisquam sed eveniet facere
+          fugiat dicta atque cumque reiciendis beatae quos corrupti fuga nostrum. Odit dolorum quos impedit dolor quod eveniet accusamus voluptas
+          placeat blanditiis voluptatibus maiores expedita, laboriosam debitis perferendis voluptates soluta aliquam accusantium dicta sapiente amet
+          excepturi dignissimos voluptate nesciunt sed? Magnam voluptatibus inventore rerum quidem nihil iusto voluptatem in quasi, ab cupiditate.
+          Dolore alias ipsum molestias asperiores ex illo, necessitatibus eum aspernatur excepturi eius saepe enim at. Soluta dolorem, molestias
+          voluptate maiores recusandae nesciunt, omnis eius provident eligendi perspiciatis obcaecati quo voluptates quidem expedita optio, vero
+          reprehenderit fuga natus cupiditate facilis quaerat! Sint voluptatum deleniti, explicabo aut natus debitis delectus minus nemo fugit quisquam
+          amet consequatur corporis veniam ratione quasi dolores velit. Fugit sed at porro hic unde nesciunt magni architecto culpa amet modi quos
+          laboriosam fuga dolor explicabo ex eum aperiam laudantium aliquid non enim quis delectus, eius perferendis? Eaque culpa voluptates quaerat
+          delectus blanditiis consequatur tempore aspernatur magni mollitia debitis reiciendis vero beatae doloremque exercitationem rem esse,
+          accusamus illum repellendus quasi. Alias, at architecto eos non quam doloribus officiis et vel rem maiores aperiam consectetur voluptas
+          excepturi ex iste laboriosam quisquam cupiditate explicabo! Odit nam reprehenderit accusantium! Excepturi sunt ad ratione enim, cupiditate
+          sint reiciendis architecto quidem inventore minus reprehenderit voluptates ipsam delectus sed quaerat ut, molestias a, sit hic est. Laborum,
+          amet modi quisquam minima nobis, magnam culpa eum voluptatem sunt esse doloremque. Magnam, natus ut quisquam delectus temporibus iusto voluptas
+          provident, ipsa vel quasi sunt aut blanditiis similique et illum modi facere inventore facilis. Facilis, beatae commodi consequatur adipisci
+          rem suscipit voluptate accusamus, praesentium mollitia esse neque soluta libero laudantium illo totam qui laboriosam ipsum nobis similique excepturi
+          quisquam! Deserunt similique aspernatur eos non ipsam aut pariatur error animi necessitatibus quam, atque a omnis minima, dignissimos quos velit,
+          eius distinctio ad magnam obcaecati modi quas. Doloribus et commodi eius reiciendis illo explicabo modi pariatur iste, incidunt odio fuga provident
+          nemo porro, at obcaecati cupiditate deserunt accusamus, fugit aperiam? Consequatur atque, a reprehenderit assumenda, modi rerum explicabo quia
+          natus id quas unde. Consequatur architecto, explicabo omnis quidem corporis voluptates voluptatum. Architecto provident molestiae totam corrupti
+          maxime ratione quibusdam, quam est voluptatibus quia dicta reiciendis beatae quas officiis cum ducimus aspernatur qui, modi atque accusamus unde
+          sed, delectus nulla? Eveniet tempora suscipit, deserunt quo temporibus autem obcaecati sequi eius optio modi beatae? Laborum, velit nulla, dolor
+          voluptatibus placeat ullam quaerat nostrum illum corrupti atque odio consequuntur enim harum sint, eum voluptatem quam quia cupiditate. Ratione
+          ex, officiis explicabo sed sit illo nisi exercitationem laborum tempore necessitatibus corrupti eos. Officia molestiae eos a nobis, dolorem quaerat
+          facere, fugit, deleniti tempore possimus minima nihil exercitationem debitis magnam voluptatibus ullam rem corrupti quisquam consequuntur accusantium
+          beatae eligendi saepe velit quae. Eos quia saepe porro odit fugiat quaerat itaque quis architecto reprehenderit quisquam quidem voluptatem sint
+          dignissimos accusamus corrupti praesentium cupiditate, in odio ab numquam aliquid. Ut iusto quaerat veritatis animi magni soluta porro autem et
+          ea asperiores. Nostrum neque atque nobis, fuga vel omnis quos molestias cum ipsa laborum eveniet assumenda beatae quo quis veniam enim. Est,
+          at temporibus ipsa excepturi cupiditate consequuntur qui tempora nostrum culpa, sed facilis! Neque eligendi, est excepturi voluptas sapiente alias
+          ut repellendus autem voluptatibus eos, nam accusantium soluta. Voluptas eius labore deserunt repudiandae magni. Rem vitae quidem debitis aliquid
+          perferendis adipisci, magnam corporis quos dolores, atque expedita officiis modi quisquam! Adipisci laboriosam dolore dolorum perferendis autem,
+          cupiditate, libero qui corrupti tempora eveniet doloribus quaerat placeat quidem possimus, voluptate harum iure minus nesciunt soluta rem vel
+          voluptates ex! Totam, non exercitationem. Dolorum, voluptate! Debitis nulla ratione blanditiis. Impedit odio cupiditate illum quod ex, sapiente
+          perferendis ut quam esse voluptates velit officia! Error, fuga necessitatibus ab consectetur corporis quas architecto beatae modi veniam impedit
+          delectus soluta velit ipsum laboriosam iusto pariatur hic eius iste repudiandae perferendis vero nam optio. Blanditiis iste alias laudantium voluptate
+          distinctio earum, excepturi libero ex ipsum dolor tempore, voluptatum tenetur. Architecto earum voluptatem vitae vel corrupti ipsam eaque suscipit
+          consequuntur cupiditate sunt hic beatae esse sapiente molestiae maxime quo rerum maiores dignissimos accusamus eius doloribus natus, provident,
+          explicabo fugit! Rerum similique corrupti facilis molestiae. Beatae quisquam nesciunt error, quod impedit modi esse maxime totam obcaecati illum,
+          voluptate, tempore eos! Porro eligendi laudantium voluptatibus perspiciatis hic aliquam libero nihil cum cumque, odit inventore sunt veritatis ab,
+          minima reprehenderit nisi! Odio minima quos a nemo iste optio, architecto itaque porro tenetur, quisquam laborum assumenda voluptate sequi iusto,
+          consequuntur quo inventore pariatur doloremque dolorum repellat! Consequatur aliquid vitae qui fugit pariatur quam deserunt, dolorem harum ipsum odio,
+          officia in, tempora modi voluptas perferendis officiis omnis maiores tempore ducimus beatae ipsam illo deleniti quibusdam. Laborum nisi laboriosam
+          possimus tempora, ad cumque excepturi et ullam sit commodi hic labore molestiae fugit ipsa cum animi doloribus.
+           Quasi reprehenderit, ipsam sed fuga assumenda, beatae delectus amet a officiis, consectetur ducimus blanditiis dolore quibusdam consequuntur incidunt
+           error expedita dignissimos nostrum! Praesentium ea voluptatem vel nesciunt officiis cumque rem ipsam repellendus. Officiis molestias quibusdam
+           perspiciatis vero voluptas libero ipsa iste temporibus. Nam quaerat molestiae, nihil, obcaecati dicta ad veniam doloremque ratione id exercitationem
+           aliquam ab ut veritatis nisi culpa ea modi illo iste provident necessitatibus inventore autem facilis pariatur. Perferendis exercitationem, impedit
+           facilis sunt aperiam ullam nesciunt velit error consequuntur iure fugit vel ratione a, nobis accusantium nemo? Provident repudiandae dolorum laudantium!
+           Fugit velit illo sint ratione quaerat odio excepturi voluptates temporibus officiis dolores? Atque dolorem, modi assumenda delectus iusto, magnam autem
+           esse exercitationem explicabo labore aliquid recusandae culpa ex nihil voluptatibus tempore facere corporis nam. Dolorem.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

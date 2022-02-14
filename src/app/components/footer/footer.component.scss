@@ -1,0 +1,63 @@
+.social{
+  height: 200px;
+  background-color: #5A564F;
+}
+
+.booking{
+  height: 200px;
+  background-color: #5A564F;
+}
+
+.subscribe{
+  height: 200px;
+  background-color: #514D47;
+}
+
+.footer{
+  background-color: #403D38;
+  height: 80px;
+  position: relative;
+}
+
+.logo{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  height: 60px;
+}
+
+.followText{
+  text-align: center;
+  color: white;
+  font-size: 22px;
+}
+
+.socialIcon{
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+}
+.inputContainer{
+  width: 100%;
+}
+.subscribeInput{
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 2px var(--bg);
+  border-radius: 0px;
+  color: grey;
+}
+.subscribeInput:focus{
+  border-bottom: solid 2px #66afe9;
+  box-shadow: 0px 0px 4px 0px #66afe9;
+}
+.subscribeButton{
+  width: 50%;
+  background-color: var(--bg);
+  box-shadow: none !important;
+  border-color: var(--bg);
+}
+.subscribeButton:active{
+  background-color: #4c5966 !important;
+  border-color: #4c5966 !important;
+}

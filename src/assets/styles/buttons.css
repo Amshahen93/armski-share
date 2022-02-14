@@ -1,0 +1,19 @@
+button{
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.redButton{
+  background-color: #D96C5E;
+  border-color: #D96C5E;
+  color: white;
+}
+
+.redButton:hover{
+  background-color: #B53B2B;
+  border-color: #B53B2B;
+}
+
+.redButton:active{
+  background-color: rgb(143, 39, 25) !important;
+}

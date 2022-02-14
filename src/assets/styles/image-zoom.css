@@ -1,0 +1,103 @@
+.image-popup{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.436);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+  overflow: auto;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.image-popup-element{
+  height: auto;
+  width: auto;
+  max-height: calc(100% - 40px);
+  max-width: calc(100% - 40px);
+  cursor: zoom-in;
+}
+
+.big-image1{
+  max-height: unset;
+  max-width: unset;
+  min-width: 100%;
+  min-height: 100%;
+  cursor: zoom-in;
+}
+
+.big-image2{
+  max-height: unset;
+  max-width: unset;
+  min-width: 150%;
+  min-height: 150%;
+  cursor: zoom-out;
+}
+
+.popup-close-icon{
+  position: fixed;
+  z-index: 2;
+  right: 20px;
+  top: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.562);
+  opacity: .6;
+  transition: ease-in-out opacity .05s;
+}
+
+.popup-close-icon:hover{
+  opacity: 1;
+}
+
+.scrollHidden{
+  overflow: hidden;
+}
+
+.icon-image{
+  color: rgba(90, 86, 79, 0.582);
+  width: 200px;
+  height: 200px;
+}
+
+.hidden-button{
+  display: none;
+}
+
+.turn-icon{
+  height: 60px;
+  width: 60px;
+  fill: #5A564F;
+  cursor: pointer;
+}
+
+.turn-button{
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.562);
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  top: calc(50vh - 40px);
+  z-index: 100;
+  opacity: .6;
+  transition: ease-in-out opacity .05s;
+}
+
+.turn-button:hover{
+  opacity: 1;
+}
+
+.left-button{
+  padding: 10px 13px 10px 7px;
+  left: 5px;
+}
+
+.right-button{
+  padding: 10px 7px 10px 13px;
+  right: 5px;
+}
+
