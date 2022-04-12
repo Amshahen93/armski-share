@@ -4,6 +4,7 @@ export interface Tour {
   description: string;
   overview?: string;
   details?: string;
+  short_details?: string [];
   price: string;
   url: string;
   pictures: {

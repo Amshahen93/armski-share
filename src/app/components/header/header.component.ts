@@ -1,5 +1,5 @@
 import { isPlatformBrowser } from '@angular/common';
-import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { Component, EventEmitter, Inject, OnInit, Output, PLATFORM_ID } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { MenuButton, Submenu } from 'src/app/models/menuButton';
 
@@ -77,6 +77,8 @@ export class HeaderComponent implements OnInit {
 
   activeSubmenu = false;
 
+  @Output() contact = new EventEmitter<Date>()
+
 
   constructor(
     private router: Router, 
@@ -147,5 +149,9 @@ export class HeaderComponent implements OnInit {
     if (this.menuBur[index1].submenu) {
       this.router.navigate((this.menuBur[index1].submenu as Submenu [])[index2].rout.rout);
     }
+  }
+  
+  onContact() {
+    this.contact.emit(new Date())
   }
 }

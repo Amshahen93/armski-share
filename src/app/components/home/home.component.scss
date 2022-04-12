@@ -3,7 +3,8 @@
   min-height: 400px;
   max-height: 60vw;
   background-image: url('/assets/images/home.jpg');
-  background-size: 100%;
+  background-size: cover;
+  background-position: center;
 }
 .imageUnder{
   height: 40px;
@@ -15,6 +16,7 @@
 }
 .toursTitle{
   font-size: 32px;
+  line-height: 42px;
   text-align: center;
   text-transform: uppercase;
   color: #5A564F;

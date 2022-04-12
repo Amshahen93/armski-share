@@ -118,7 +118,7 @@ export class ParallaxDirective implements AfterViewInit, OnDestroy {
   clickOnButton(index: number) {
     if (this.elements[index]) {
       this.elements[index].scrollIntoView({block: 'start'});
-      window.scrollTo({top: window.scrollY - 110})
+      window.scrollTo({top: window.scrollY - 90})
     }
     this.setActiveClassToButton(index);
   }
@@ -150,7 +150,7 @@ export class ParallaxDirective implements AfterViewInit, OnDestroy {
 
   decideActiveElement(scroll: number) {
     for (let i = this.offsetTop.length; i > -1; i--) {
-      if (this.offsetTop[i] < scroll + 110) {
+      if (this.offsetTop[i] < scroll + 180) {
         this.setActiveClassToButton(i);
         i = -1;
       } else if (scroll === 0) {
