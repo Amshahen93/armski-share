@@ -1,5 +1,6 @@
-import { Injectable } from '@angular/core';
-import { fromEvent, Subject } from 'rxjs';
+import { isPlatformBrowser } from '@angular/common';
+import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
+import { fromEvent, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Injectable({
@@ -7,9 +8,16 @@ import { map } from 'rxjs/operators';
 })
 
 export class ScrollService {
-  scrollEvent = fromEvent(window, 'scroll').pipe(map((event) => {
-    return window.scrollY
-  }));
-  windowResize = fromEvent(window, 'resize');
-  constructor() { }
+  scrollEvent!: Observable<number>;
+  windowResize!: Observable<Event>;
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: any,
+  ) {
+    if(isPlatformBrowser(this.platformId)) {
+      this.scrollEvent = fromEvent(window, 'scroll').pipe(map((event) => {
+        return window.scrollY
+      }));
+      this.windowResize = fromEvent(window, 'resize');
+    }
+  }
 }

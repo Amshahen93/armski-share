@@ -1,4 +1,5 @@
-import { Directive, ElementRef, AfterViewInit, Renderer2, Input, OnDestroy } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Directive, ElementRef, AfterViewInit, Renderer2, Input, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
 import { ScrollService } from '../components/layout/scroll.service';
 
@@ -16,10 +17,17 @@ export class ParallaxDirective implements AfterViewInit, OnDestroy {
   resizeListener!: Subscription;
   buttonListeners: (() => void) [] = [];
   offsetTop: number [] = [];
-  constructor(private el: ElementRef, private renderer: Renderer2, private scrollService: ScrollService) {}
+  constructor(
+    private el: ElementRef,
+    private renderer: Renderer2,
+    private scrollService: ScrollService,
+    @Inject(PLATFORM_ID) private platformId: any,
+  ) {}
 
   ngAfterViewInit(): void {
-    this.allFunctionality();
+    if (isPlatformBrowser(this.platformId)) {
+      this.allFunctionality();
+    }
   }
 
   allFunctionality() {
@@ -50,7 +58,7 @@ export class ParallaxDirective implements AfterViewInit, OnDestroy {
   }
 
   createWindowScrollEventListener() {
-    this.scrollService.scrollEvent.subscribe(el => {
+    this.scrollService?.scrollEvent.subscribe(el => {
       if (this.fromTop < el) {
         this.addPositionFixed();
       } else {
@@ -81,7 +89,7 @@ export class ParallaxDirective implements AfterViewInit, OnDestroy {
   }
 
   listenerForResize() {
-   this.resizeListener = this.scrollService.windowResize.subscribe(size => {
+   this.resizeListener = this.scrollService?.windowResize.subscribe(size => {
       this.getSpaceBetweenTop();
     });
   }
@@ -118,7 +126,9 @@ export class ParallaxDirective implements AfterViewInit, OnDestroy {
   clickOnButton(index: number) {
     if (this.elements[index]) {
       this.elements[index].scrollIntoView({block: 'start'});
-      window.scrollTo({top: window.scrollY - 90})
+      if (isPlatformBrowser(this.platformId)) {
+        window.scrollTo({top: window.scrollY - 90});
+      }
     }
     this.setActiveClassToButton(index);
   }
