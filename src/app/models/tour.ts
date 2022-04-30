@@ -7,6 +7,7 @@ export interface Tour {
   short_details?: string [];
   price: string;
   url: string;
+  parentUrl: string;
   pictures: {
     url: string;
     smallUrl: string;

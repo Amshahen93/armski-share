@@ -8,14 +8,15 @@
       <div class="container">
         <div class="row">
           <div class="col-12 toursTitle">
-            Ski and Summer Adventures.
+            Ski and Summer Adventure
           </div>
           <div class="col-12 toursSubtitle text-center mt-3">
-            is the only incoming tour operator in Armenia, which offers exclusively adventure tour packages in the region. “Ski and Summer Adventures” have been successfully carrying out ski mountaineering tours, mountain biking and trekking tours, bicycle and climbing tours in Armenia and Georgia for about 15 years.
+            Ski and summer adventure  is the only incoming tour operator in Armenia, which offers exclusively adventure tour packages in the region. “Ski and Summer Adventures” have been successfully carrying out ski mountaineering tours, mountain biking and trekking tours, bicycle and climbing tours in Armenia and Georgia for about 15 years.
           </div>
         </div>
         <div class="row mt-4">
           <div class="col-12 col-md-6 col-lg-4 tourContainer" 
+            (click)="onTour(tour)"
             *ngFor='let tour of tours; let i = index;'>
             <div class="tour"
             [ngStyle]="{'background-image': 'url(' + tour.image + ')' }">
@@ -39,6 +40,7 @@
         </div>
         <div class="row mt-4">
           <div class="col-12 col-md-6 col-lg-4 tourContainer" 
+          (click)="onTour(tour)"
             *ngFor='let tour of tours1; let i = index;'>
             <div class="tour"
             [ngStyle]="{'background-image': 'url(' + tour.image + ')' }">
