@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './components/about/about.component';
 import { ASMAComponent } from './components/asma/asma.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
@@ -55,7 +55,8 @@ const routes: Routes = [{
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
     initialNavigation: 'enabled',
-    scrollPositionRestoration: 'enabled'
+    scrollPositionRestoration: 'enabled',
+    preloadingStrategy: PreloadAllModules
 })],
   exports: [RouterModule]
 })

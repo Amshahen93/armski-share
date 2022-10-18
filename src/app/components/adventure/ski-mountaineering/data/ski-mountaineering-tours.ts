@@ -2,6 +2,7 @@ import { Tour } from 'src/app/models/tour';
 
 export const skiMountaineeringTours: Tour [] = [{
   name: 'Mount Kazbegi',
+  type: 'Ski mountaineering tours',
   short_details: [
     'Group price starts from 850 Euro',
     'Winter adventures in Kazbegi National park',
@@ -144,6 +145,7 @@ export const skiMountaineeringTours: Tour [] = [{
   }]
 }, {
   name: 'Georgia',
+  type: 'Ski mountaineering tours',
   short_details: [
     'Group price starts from 870 Euro',
     'Ski mountaineering trips 3000 + higher mountains',
@@ -220,6 +222,7 @@ export const skiMountaineeringTours: Tour [] = [{
   }]
 }, {
   name: 'Armenian Highland',
+  type: 'Ski mountaineering tours',
   short_details: [
     'Group price starts from 870 Euro',
     'Including Mount Aragats 4095m highest peak of Armenia',

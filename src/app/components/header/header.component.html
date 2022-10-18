@@ -8,21 +8,22 @@
                     <div 
                       class="menuButton boldText"
                       (click)='onClickBur(button)'
-                      [ngClass]="{'active': button.active}"
+                      [ngClass]="button | activeMenu: date"
                       *ngIf='!button.submenu'>
                         {{ button.name }}
                     </div>
+                    <a [href]="domain + button"></a>
                     <ng-container>
                       <div class='menuButton submenu boldText'
-                      [ngClass]="{'active': button.active}" 
+                      [ngClass]="button | activeMenu: date"
                       *ngIf="button.submenu" 
                       [matMenuTriggerFor]="menu">
                         {{ button.name }}
                       </div>
                       <mat-menu #menu="matMenu">
                         <button mat-menu-item [disabled]="menu.disabled"
-                          [ngClass]="{'active': button.submenuIndex === j}" 
-                          *ngFor='let menu of button.submenu; let j = index;'
+                        *ngFor='let menu of button.submenu; let j = index;'
+                        [ngClass]="button | activeMenu: date: menu"
                           (click)='onSubmenus(i, j)'>
                           {{ menu.name }}
                         </button>

@@ -1,8 +1,6 @@
 export interface MenuButton {
     name: string;
     rout?: Route;
-    active?: boolean;
-    submenuIndex?: number | null;
     disabled?: boolean;
     submenu?: Submenu [];
 }

@@ -6,6 +6,7 @@ export interface Tour {
   details?: string;
   short_details?: string [];
   price: string;
+  type: string;
   url: string;
   parentUrl: string;
   pictures: {

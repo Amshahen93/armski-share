@@ -1,0 +1,31 @@
+.full-slider {
+  .owl-theme .owl-dots .owl-dot {
+    padding: 0px 4px;
+    span {
+      background: white !important;
+      width: 100% !important;
+      height: 3px !important;
+      opacity: 0.3 !important;
+      margin: 5px 0px !important;
+      border-radius: 0px !important;
+    }
+  }
+
+  .owl-theme .owl-dots .owl-dot.active span,
+  .owl-theme .owl-dots .owl-dot:hover span {
+    opacity: 1 !important;
+  }
+
+  .owl-theme .owl-nav.disabled + .owl-dots {
+    margin-top: -15px !important;
+    height: 15px;
+    z-index: 10000000 !important;
+    position: relative !important;
+    display: flex;
+    padding: 0px 3px;
+  }
+
+  .owl-theme .owl-dots .owl-dot {
+    width: 100% !important;
+  }
+}

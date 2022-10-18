@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "e0798c94-4e55-455d-a2b6-6c524addc641"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "armski": {
+    "ToursCaucasus": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/armski/browser",
+            "outputPath": "dist/ToursCaucasus/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -36,6 +39,7 @@
               "src/assets/styles/buttons.css",
               "src/assets/styles/parallax.css",
               "src/assets/styles/image-zoom.css",
+              "src/assets/styles/slider.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -77,10 +81,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "armski:build:production"
+              "browserTarget": "ToursCaucasus:build:production"
             },
             "development": {
-              "browserTarget": "armski:build:development"
+              "browserTarget": "ToursCaucasus:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -88,7 +92,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "armski:build"
+            "browserTarget": "ToursCaucasus:build"
           }
         },
         "test": {
@@ -109,6 +113,7 @@
               "src/assets/styles/buttons.css",
               "src/assets/styles/parallax.css",
               "src/assets/styles/image-zoom.css",
+              "src/assets/styles/slider.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -117,7 +122,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/armski/server",
+            "outputPath": "dist/ToursCaucasus/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json",
             "inlineStyleLanguage": "scss"
@@ -144,12 +149,12 @@
           "builder": "@nguniversal/builders:ssr-dev-server",
           "configurations": {
             "development": {
-              "browserTarget": "armski:build:development",
-              "serverTarget": "armski:server:development"
+              "browserTarget": "ToursCaucasus:build:development",
+              "serverTarget": "ToursCaucasus:server:development"
             },
             "production": {
-              "browserTarget": "armski:build:production",
-              "serverTarget": "armski:server:production"
+              "browserTarget": "ToursCaucasus:build:production",
+              "serverTarget": "ToursCaucasus:server:production"
             }
           },
           "defaultConfiguration": "development"
@@ -163,12 +168,12 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "armski:build:production",
-              "serverTarget": "armski:server:production"
+              "browserTarget": "ToursCaucasus:build:production",
+              "serverTarget": "ToursCaucasus:server:production"
             },
             "development": {
-              "browserTarget": "armski:build:development",
-              "serverTarget": "armski:server:development"
+              "browserTarget": "ToursCaucasus:build:development",
+              "serverTarget": "ToursCaucasus:server:development"
             }
           },
           "defaultConfiguration": "production"
@@ -176,5 +181,5 @@
       }
     }
   },
-  "defaultProject": "armski"
+  "defaultProject": "ToursCaucasus"
 }

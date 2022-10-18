@@ -2,6 +2,7 @@ import { Tour } from "src/app/models/tour";
 
 export const Trekking: Tour []  = [{
   name: 'Armenia',
+  type: 'Trekking',
   short_details: [
     'Group price starts from 870 Euro',
     'Exploring volcanic mountains and crater lakes',
@@ -102,6 +103,7 @@ export const Trekking: Tour []  = [{
   }]
 }, {
   name: 'Armenia And Georgia',
+  type: 'Trekking',
   short_details: [
     'Group price starts from 1700 Euro',
     'Rich pre-Christian and post-Christian culture',

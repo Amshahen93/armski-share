@@ -1,5 +1,5 @@
 {
-  "name": "armski",
+  "name": "ToursCaucasus",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,10 +7,10 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "dev:ssr": "ng run armski:serve-ssr",
-    "serve:ssr": "node dist/armski/server/main.js",
-    "build:ssr": "ng build && ng run armski:server",
-    "prerender": "ng run armski:prerender"
+    "dev:ssr": "ng run ToursCaucasus:serve-ssr",
+    "serve:ssr": "node dist/ToursCaucasus/server/main.js",
+    "build:ssr": "ng build && ng run ToursCaucasus:server",
+    "prerender": "ng run ToursCaucasus:prerender"
   },
   "private": true,
   "dependencies": {
@@ -27,6 +27,7 @@
     "@angular/router": "~12.2.0",
     "@nguniversal/express-engine": "^12.1.3",
     "express": "^4.15.2",
+    "ngx-owl-carousel-o": "^6.0.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

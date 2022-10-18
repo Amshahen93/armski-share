@@ -2,6 +2,7 @@ import { Tour } from 'src/app/models/tour';
 
 export const Climbing: Tour []  = [{
     name: 'Climbing Combi',
+    type: 'Climbing',
     short_details: [
       'Group price starts from 1250 Euro',
       'The most popular mountains in Caucasus',
@@ -167,6 +168,7 @@ export const Climbing: Tour []  = [{
     }]
   }, {
     name: 'Climbing Mount Ararat',
+    type: 'Climbing',
     short_details: [
       'Group price starts from 1300 Euro',
       'Two popular mountains of Armenian Highland',
@@ -349,6 +351,7 @@ export const Climbing: Tour []  = [{
     }]
   }, {
     name: 'Climbing Mount Kazbegi',
+    type: 'Climbing',
     short_details: [
       'Group price starts from 750 Euro',
       'Exploring old capital city of Georgia',

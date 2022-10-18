@@ -1,0 +1,21 @@
+<div class="position-relative full-slider-container">
+  <div class="full-slider">
+    <owl-carousel-o #owlCar class="w-100" 
+    [options]="customOptions">
+      <ng-template carouselSlide *ngFor="let tour of data">
+        <div
+          class="full-elem-height d-flex justify-content-center align-items-center flex-column"
+          [ngStyle]="{
+            'background-image': 'url(' + tour.image + ')'
+          }"
+        >
+          <div class="" (click)="onTour(tour)">
+            <div class="title">The Best Tours</div>
+            <div class="tour-type">{{tour.type}}</div>
+            <div class="mt-2 tour-title">{{tour.name}}</div>
+          </div>  
+      </div>
+      </ng-template>
+    </owl-carousel-o>
+  </div>
+</div>

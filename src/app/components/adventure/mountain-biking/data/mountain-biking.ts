@@ -2,6 +2,7 @@ import { Tour } from 'src/app/models/tour';
 
 export const MountainBiking: Tour [] = [{
   name: 'MTB Trip Armenia',
+  type: 'Mountain biking',
   short_details: [
     '10 days group price is 980 Euro',
     'Exploring wild nature of Armenian Highland',

@@ -15,7 +15,10 @@ import { ASMAComponent } from './components/asma/asma.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MatMenuModule } from '@angular/material/menu';
-
+import { ActiveMenuPipe } from './pipes/active-menu.pipe';
+import { PropertyCarouselComponent } from './components/property-carousel/property-carousel.component';
+import { MatIconModule } from '@angular/material/icon';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 
 @NgModule({
@@ -29,6 +32,9 @@ import { MatMenuModule } from '@angular/material/menu';
     ASMAComponent,
     FeedbackComponent,
     FooterComponent,
+    HeaderComponent,
+    ActiveMenuPipe,
+    PropertyCarouselComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -36,7 +42,9 @@ import { MatMenuModule } from '@angular/material/menu';
     BrowserAnimationsModule,
     MatButtonModule,
     MatMenuModule,
-    SvgModule
+    SvgModule,
+    MatIconModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
