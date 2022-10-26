@@ -50,7 +50,7 @@ export class PropertyCarouselComponent
         center: true,
         autoplay: true,
         autoplaySpeed: 600,
-        autoplayTimeout: 8000
+        autoplayTimeout: 6000
       };
     } else {
       this.customOptions = {
@@ -77,7 +77,6 @@ export class PropertyCarouselComponent
   }
 
   public onTour(tour: Tour) {
-    console.log(tour);
     this._router.navigate([tour.parentUrl, tour.url]);
   }
 }

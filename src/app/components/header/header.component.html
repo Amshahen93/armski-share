@@ -36,9 +36,32 @@
             </div>
             <!-- for mobile -->
             <div class="menuButtonsMobile">
-              <button class="btn btn-secondary button getInTouch boldText">
-                Enquire
+              <button mat-button [matMenuTriggerFor]="menu" [color]="'primary'" class="menu-button boldText">
+                <mat-icon>menu</mat-icon>
               </button>
+                <mat-menu #menu="matMenu">
+                  <ng-container *ngFor="let button of menuBur; let i = index;">
+                    <button mat-menu-item 
+                      (click)='onClickBur(button)'
+                      *ngIf="!button.submenu" 
+                      [ngClass]="button | activeMenu: date">
+                      {{button.name}}
+                    </button>
+                    <ng-container *ngIf="button.submenu">
+                      <button mat-menu-item [matMenuTriggerFor]="submenu"  [ngClass]="button | activeMenu: date">
+                        {{button.name}}
+                      </button>
+                      <mat-menu #submenu="matMenu">
+                        <button mat-menu-item 
+                        *ngFor="let menu of button.submenu; let j = index" 
+                        [ngClass]="button | activeMenu: date: menu" 
+                        (click)='onSubmenus(i, j)'>
+                          {{menu.name}}
+                        </button>
+                      </mat-menu>
+                    </ng-container>
+                  </ng-container>
+                </mat-menu>
             </div>
         </div>
     </div>

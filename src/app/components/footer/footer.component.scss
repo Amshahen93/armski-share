@@ -42,7 +42,13 @@
   height: 35px;
   width: 35px;
   cursor: pointer;
+  
 }
+
+.social-icon-margin{
+  margin-right: 1.5rem;
+}
+
 .inputContainer{
   width: 100%;
 }
@@ -66,4 +72,27 @@
 .subscribeButton:active{
   background-color: #4c5966 !important;
   border-color: #4c5966 !important;
+}
+
+@media screen and (max-width: 550px) {
+  .followText{
+    font-size: 18px;
+  }
+
+  .socialIcon{
+    height: 25px;
+    width: 25px;
+  }
+
+  .logo{
+    height: 40px;
+  }
+
+  .contacts{
+    font-size: 12px;
+  }
+
+  .social-icon-margin{
+    margin-right: 1rem;
+  }
 }
