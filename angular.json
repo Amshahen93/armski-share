@@ -34,6 +34,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/assets/bootstrap/bootstrap.min.css",
               "src/assets/styles/buttons.css",
               "src/assets/styles/parallax.css",
@@ -107,6 +108,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/assets/bootstrap/bootstrap.min.css",
               "src/assets/styles/buttons.css",
               "src/assets/styles/parallax.css",
