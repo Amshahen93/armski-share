@@ -1,13 +1,14 @@
 .bigImage{
   height: calc(100vh - 320px);
   min-height: 400px;
-  background-size: 100% auto;
-  background-position-y: center;
+  background-size: cover;
+  background-position: center;
 }
 
 .bigTitle{
   color: white;
   font-size: 45px;
+  line-height: 50px;
   text-transform: uppercase;
   text-shadow: 0px 10px 5px rgba(0, 0, 0, .6);
 }

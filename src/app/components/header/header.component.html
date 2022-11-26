@@ -36,8 +36,7 @@
             </div>
             <!-- for mobile -->
             <div class="menuButtonsMobile">
-              <button mat-button [matMenuTriggerFor]="menu" 
-                [color]="'primary'" 
+              <button mat-button [matMenuTriggerFor]="menu" [color]="'primary'" 
                 class="menu-button boldText">
                 <mat-icon>menu</mat-icon>
               </button>
@@ -50,12 +49,14 @@
                       {{button.name}}
                     </button>
                     <ng-container *ngIf="button.submenu">
-                      <button mat-menu-item [matMenuTriggerFor]="submenu" 
+                      <button mat-menu-item 
+                      [matMenuTriggerFor]="submenu" 
                         [ngClass]="button | activeMenu: date">
                         {{button.name}}
                       </button>
                       <mat-menu #submenu="matMenu">
                         <button mat-menu-item 
+                        [disabled]="menu.disabled"
                         *ngFor="let menu of button.submenu; let j = index" 
                         [ngClass]="button | activeMenu: date: menu" 
                         (click)='onSubmenus(i, j)'>

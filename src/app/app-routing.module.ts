@@ -28,7 +28,7 @@ const routes: Routes = [{
     import('./components/tours/tours.module').
     then(m => m.ToursModule)
   }, {
-    path: 'armenia', loadChildren: () => 
+    path: 'armenia-blog', loadChildren: () => 
     import('./components/armenia/armenia.module').
     then(m => m.ArmeniaModule)
   }, {

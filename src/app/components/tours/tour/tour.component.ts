@@ -1,4 +1,5 @@
-import { Component, OnInit} from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, Inject, OnInit, PLATFORM_ID} from '@angular/core';
 import { armenianHighland } from '../../../Data/tours/ski-mountaineering/tours/armenian_highland';
 import { georgia } from '../../../Data/tours/ski-mountaineering/tours/georgia';
 import { mountKazbegi } from '../../../Data/tours/ski-mountaineering/tours/mount_kazbegi';
@@ -76,10 +77,12 @@ export class TourComponent implements OnInit {
     have: ['- 4/5 Bedroom Villa', '- Private Pool', '- Private Garden and Roof Terrace', '- Walking Distance from Beach']
   }];
 
-  constructor() { }
+  constructor(@Inject(PLATFORM_ID) private platformId: any) { }
 
   ngOnInit() {
-    this.decideTourData();
+    if (isPlatformBrowser(this.platformId)) {
+      this.decideTourData();
+    }
   }
 
   decideTourData() {

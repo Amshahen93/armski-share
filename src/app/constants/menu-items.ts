@@ -36,7 +36,7 @@ export const MenuItems: MenuButton [] = [{
   }]
 },  {
   name: 'Armenia',
-  rout: {rout: ['armenia']},
+  rout: {rout: ['armenia-blog']},
 }
 // {
 //   name: 'ASMA',

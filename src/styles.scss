@@ -75,26 +75,32 @@ b {
 
 .f45{
   font-size: 45px;
+  line-height: 50px;
 }
 
 .f22{
   font-size: 22px;
+  line-height: 26px;
 }
 
 .f32{
   font-size: 32px;
+  line-height: 38px;
 }
 
 .f13{
   font-size: 13px;
+  line-height: 17px;
 }
 
 .f15{
   font-size: 15px;
+  line-height: 19px;
 }
 
 .f17{
   font-size: 17px;
+  line-height: 22px;
 }
 
 .text-color{
@@ -136,4 +142,11 @@ button.redButton{
 
 button.redButton:hover{
   background-color: var(--primaryHover);
+}
+
+@media screen and (max-width: 550px) {
+  .bigTitle{
+    font-size: 35px !important;
+    line-height: 40px !important;
+  }
 }

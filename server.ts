@@ -7,6 +7,8 @@ import { join } from 'path';
 import { AppServerModule } from './src/main.server';
 import { APP_BASE_HREF } from '@angular/common';
 import { existsSync } from 'fs';
+import * as https from 'https';
+import * as fs from 'fs';
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
@@ -38,10 +40,12 @@ export function app(): express.Express {
 }
 
 function run(): void {
+  const privateKey = fs.readFileSync('ssl/cert.pem');
+  const certificate = fs.readFileSync('ssl/key.pem');
   const port = process.env['PORT'] || 4000;
 
   // Start up the Node server
-  const server = app();
+  const server = https.createServer({ key: privateKey, cert: certificate }, app());
   server.listen(port, () => {
     console.log(`Node Express server listening on http://localhost:${port}`);
   });

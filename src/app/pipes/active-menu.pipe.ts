@@ -1,4 +1,5 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Inject, Pipe, PipeTransform, PLATFORM_ID } from '@angular/core';
 import { MenuButton, Submenu } from '../models/menuButton';
 
 @Pipe({
@@ -6,9 +7,17 @@ import { MenuButton, Submenu } from '../models/menuButton';
   pure: false
 })
 export class ActiveMenuPipe implements PipeTransform {
-  private _rout = location.pathname;
+  private _rout: string = '';
+  constructor ( @Inject(PLATFORM_ID) private platformId: any) {
+    if (isPlatformBrowser(this.platformId)) {
+      this._rout = location.pathname;
+    }
+  }
+ 
   transform(value: MenuButton, date: Date, submenu?: Submenu): string {
-    this._rout = location.pathname;
+    if (isPlatformBrowser(this.platformId)) {
+      this._rout = location.pathname;
+    }
     if (submenu) {
       const status = this._checkSubmenu(submenu);
       if (status) {

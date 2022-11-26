@@ -1,4 +1,5 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
 import { Router, ActivationEnd } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { skiMountaineering } from '../../Data/tours/ski-mountaineering/ski-mountaineering';
@@ -51,8 +52,10 @@ export class ToursComponent implements OnInit, OnDestroy {
     image: 'assets/images/tours.jpg',
     url: 'loremipsum'
   }];
-  constructor(private router: Router) {
-    this.subscribeOnRout();
+  constructor(private router: Router, @Inject(PLATFORM_ID) private platformId: any) {
+    if (isPlatformBrowser(this.platformId)) {
+      this.subscribeOnRout();
+    }
   }
 
   ngOnInit(): void {}
